@@ -1,0 +1,25 @@
+{
+  "name": "cnc-app",
+  "description": "printrbot cnc app",
+  "main": "main.js",
+  "authors": [
+    "mick"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Printrbot/cnc-client",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.6.1",
+    "bootstrap": "^3.3.6",
+    "requirejs": "requirejs-bower#^2.2.0"
+  }
+}

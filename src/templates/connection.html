@@ -1,0 +1,10 @@
+<% if (!error) { %>
+  <div class="connecting-msg alert alert-info">
+      <i class="fa fa-cog fa-spin"></i> Connecting... please wait
+  </div>
+<% } else { %>
+  <div class="connection-error alert alert-danger">
+      <i class="fa fa-plug fa-exclamation-circle"></i> Connection error. Make sure machine is connected and powered on.
+      <br/><button class="btn btn-default connect-button btn-sm" style="margin-top:10px;"><i class="fa fa-plug"></i> Connect</button>
+  </div>
+<% } %>

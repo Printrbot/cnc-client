@@ -1,0 +1,300 @@
+body {
+  padding: 0;
+  margin:0;
+  background-color: #ededed;
+  color: #555;
+}
+
+button {
+  background-color: white;
+}
+
+.coords button, .jog-type button, .units button {
+    padding:0;
+    height:20px;
+    font-size:11px;
+    line-height: 11px;
+    width:100%;
+    border: none;
+}
+
+.jogview {
+  min-width: 340px;
+  margin:15px 20px 10px 20px;
+}
+
+
+.jog-speed input {
+    height:20px;
+    margin:0;
+    width: 100%;
+    font-size: 11px;
+    line-height:11px;
+    top:0;
+    border-radius: 3px;
+    border: none;
+    padding-left: 5px;
+}
+
+
+.dros input {
+    border: none;
+    border-radius: 3px;
+    font-size: 1.1em;
+    line-height: 36px;
+    padding: 0;
+    margin-top: 0;
+    margin-left:2px;
+    height: 34px;
+    width: 136px;
+    padding: 0 4px;
+    font-size: 15px;
+    position: relative;
+    top:2px;
+    background-color: white;
+    color: #555;
+}
+
+.l {
+  font-size: 11px;
+  margin-bottom:3px;
+  color: #555;
+}
+
+
+.droAxis button, .jog-speed button {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    border-radius: 3px;
+    position: relative;
+    padding: 0;
+    margin-left: 2px;
+    color: #434a54;
+    background-color: white;
+}
+
+.dros {
+    margin-top: 5px;
+    border: 10px solid #f7f7f7;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+}
+
+.dro-ctrl {
+  margin-bottom: 10px;
+}
+
+.dro-axis {
+  margin-bottom: 4px;
+}
+
+.header {
+  background-color: #2980BB;
+  height: 32px;
+}
+
+.header a {
+  height: 32px;
+  width: 32px;
+  color: white;
+  padding: 6px;
+  border-radius: 0;
+  margin: 0;
+  border: 0;
+}
+
+.header a.active {
+    background-color: #359BDD;
+}
+
+.program-view {
+    margin: 5px 20px;
+    border-radius: 3px;
+
+
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.program-view .run-actions,
+.program-view .edit-actions,
+.program-view .program-pause,
+.program-view .program-progress,
+.program-view .program-code-block {
+  display: none;
+}
+
+.program-code-block {
+  padding: 0 !important;
+}
+.program-code-block textarea {
+  width: 100%;
+  font-size: 0.8em;
+}
+.program-code-block textarea[disabled] {
+  background-color: rgba(255,255,255, 0.3);
+  color: #3c763d;
+}
+
+.program-view.loaded button.program-start,
+.program-view.loaded button.program-clear,
+.program-view.loaded .program-code-block {
+  display: inline;
+}
+
+.program-view.loaded button.program-load {
+  display: none;
+}
+
+.program-view.loaded .run-actions {
+  display: inline;
+}
+
+.program-view.loaded.running .program-start,
+.program-view.loaded.running .program-edit,
+.program-view.loaded.running .program-code-block,
+.program-view.loaded.running .program-clear {
+  display: none;
+}
+.program-view.loaded.running .program-pause {
+  display: inline;
+}
+.program-view.loaded.running .program-progress {
+  display: block;
+}
+
+.program-view .panel-title {
+  color: #31708f;
+}
+
+.program-view.loaded {
+  background-color: #dff0d8;
+}
+
+.program-view.loaded .panel-title {
+  color: #3c763d;
+}
+
+.program-view .program-code-block {
+  padding: 0 5px;
+}
+
+.program-view .program-code-block textarea {
+  border:none;
+  height: 113px;
+}
+
+.program-actions {
+  padding: 5px;
+}
+
+button.program-start,
+button.program-pause {
+  border-radius: 2px;
+  width: 100%;
+  margin-top:10px;
+  font-size: 1.2em;
+}
+
+.program-stop {
+  border-radius: 2px;
+}
+
+.program-load {
+
+}
+
+.estop {
+  margin: 10px 20px;
+  width: 340px;
+  background-color: red;
+  color: white;
+  border-radius: 2px;
+}
+
+.console-out {
+  width: 340px;
+  margin: 20px 20px 10px 20px;
+  background-color: white;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  height: 396px;
+  overflow: auto;
+}
+
+.console-in {
+  width: 340px;
+  margin: 0 20px;
+  border-radius: 2px;
+}
+
+.alert {
+  border-radius: 4px;
+  margin:5px;
+}
+
+.alert-info {
+  background-color: #bce8f1;
+}
+.alert-success {
+  background-color: #d6e9c6;
+}
+.panel {
+  border: none;
+min-width: 340px;
+
+}
+
+.panel-body {
+  padding:2px;
+}
+
+
+.panel-title {
+  text-transform: uppercase;
+  font-size: 1em;
+}
+.panel-default > .panel-heading {
+    color: #555;
+    background-color: transparent;
+    border:none;
+}
+
+.connecting-msg, .connection-error {
+  margin: 20px;
+}
+
+.machine-status {
+  position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #f7f7f7;
+    font-size: 12px;
+
+}
+
+.program-progress {
+  margin: 0 5px;
+}
+
+.line {
+  white-space: nowrap;
+  font-size: 11px;
+  padding: 3px;
+  border-bottom: 1px dotted #ccc;
+}
+
+.control-panel {
+  margin: 0 20px 10px 20px;
+  background-color: #f7f7f7;
+}
+
+.pblogo {
+  margin-top: 7px;
+  margin-right: 10px;
+}

@@ -1,0 +1,71 @@
+<div class="jogview">
+  <div class="row dro-ctrl">
+
+      <div class="jog-type col-xs-4">
+          <div class="l">Control type:</div>
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <% if (machine.data.get('jog_mode') == 'con') { %>
+              <i class="fa fa-refresh"></i> jog
+            <% } else { %>
+              <i class="fa fa-ellipsis-h"></i> step
+            <% } %>
+              <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <% if (machine.data.get('jog_mode') == 'inc') { %>
+              <li><a href="#" idx="con"><i class="fa fa-refresh"></i> jog </a></li>
+            <% } else { %>
+              <li><a href="#" idx="inc"><i class="fa fa-ellipsis-h"></i> step </a></li>
+            <% } %>
+          </ul>
+      </div>
+      <div class="units col-xs-4">
+          <div class="l">Units:</div>
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              <i class="fa fa-tachometer"></i> <% if (machine.data.get('unit') == 1) { %>mm<% } else { %>inch<% } %>
+              <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+              <% if (machine.data.get('unit') == 0) { %>
+              <li><a href="#" idx="mm"><i class="fa fa-tachometer"></i> mm</a></li>
+              <% } else { %>
+              <li><a href="#" idx="inch"><i class="fa fa-tachometer"></i> inch</a></li>
+              <% } %>
+          </ul>
+      </div>
+      <div class="col-xs-4 jog-speed">
+          <% if (machine.data.get('jog_mode') == 'con') { %>
+            <div class="l">Speed (<% if (machine.data.get('unit') == 1) { %>mm<% } else { %>inch<% } %>/min):</div>
+          <% } else { %>
+            <div class="l">Step (<% if (machine.data.get('unit') == 1) { %>mm<% } else { %>inch<% } %>):</div>
+          <% } %>
+          <input type="number" value="<%- (machine.data.get('jog_mode') == 'con') ? machine.get('jog_speed') : machine.get('jog_step') %>"/>
+      </div>
+  </div>
+  <div class="dros">
+      <div class="dro-axis x">
+          <label>X</label>
+          <button class="btn jog-xyz" ctrl="x-"><i class="fa fa-minus"></i></button>
+          <input type="text" ctrl="x" value="<%- machine.data.get('posx') %>"/>
+          <button class="btn jog-xyz"  ctrl="x+"><i class="fa fa-plus"></i></button>
+          <button class="btn z"><i class="fa fa-dot-circle-o"></i></button>
+          <button class="btn h"><i class="fa fa-home"></i></button>
+      </div>
+      <div class="dro-axis y">
+          <label>Y</label>
+          <button class="btn jog-xyz" ctrl="y-"><i class="fa fa-minus"></i></button>
+          <input type="text"  ctrl="y" value="<%- machine.data.get('posy') %>"/>
+          <button class="btn jog-xyz"  ctrl="y+"><i class="fa fa-plus"></i></button>
+          <button class="btn z"><i class="fa fa-dot-circle-o"></i></button>
+          <button class="btn h"><i class="fa fa-home"></i></button>
+      </div>
+      <div class="dro-axis z">
+          <label>Z</label>
+          <button class="btn jog-xyz" ctrl="z-"><i class="fa fa-minus"></i></button>
+          <input type="text"  ctrl="z" value="<%- machine.data.get('posz') %>"/>
+          <button class="btn jog-xyz"  ctrl="z+"><i class="fa fa-plus"></i></button>
+          <button class="btn z"><i class="fa fa-dot-circle-o"></i></button>
+          <button class="btn h"><i class="fa fa-home"></i></button>
+      </div>
+  </div>
+</div>
